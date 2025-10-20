@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Exam Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Name & Roll Entry -->
+    <div id="name-container" class="card">
+      <h1>🧑‍💻 Online Exam Portal</h1>
+      <input type="text" id="roll-no" placeholder="Enter Roll Number" />
+      <input type="text" id="participant-name" placeholder="Enter Your Name" />
+      <button id="start-quiz">Start Quiz</button>
+    </div>
+
+    <!-- Instructions -->
+    <div id="instructions-container" class="card" style="display: none;">
+      <h2>📋 Instructions</h2>
+      <p><strong>1.</strong> You have 30 questions across 3 topics: Reasoning, General Awareness, Maths.</p>
+      <p><strong>2.</strong> Each question carries 1 mark. No negative marking.</p>
+      <p><strong>3.</strong> You can switch between topics using the buttons above once the exam starts.</p>
+      <p><strong>4.</strong> The status panel shows your progress in the current topic.</p>
+      <ul class="color-legend">
+        <li><span class="circle not-visited"></span> Not Visited</li>
+        <li><span class="circle not-answered"></span> Not Answered</li>
+        <li><span class="circle answered"></span> Answered</li>
+        <li><span class="circle review"></span> Marked for Review</li>
+      </ul>
+      <button id="begin-exam">Start Exam ▶️</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz-container" style="display: none;">
+      <div class="header">
+        <div class="exam-info">
+          <h2 id="exam-title">Reasoning</h2>
+          <p>Roll No: <span id="display-roll"></span> | Name: <span id="display-name"></span></p>
+        </div>
+        <div class="timer">⏰ Time Left: <span id="timer">30:00</span></div>
+      </div>
+
+      <div class="topic-buttons">
+        <button class="topic-btn" data-topic="SQL">SQL</button>
+        <button class="topic-btn" data-topic="Python">Python</button>
+        <button class="topic-btn" data-topic="DSA">DSA</button>
+      </div>
+
+      <div class="main-content">
+        <!-- Left: Question Area -->
+        <div class="question-card">
+          <h3 id="question-text"></h3>
+          <div id="options-container"></div>
+
+          <div class="navigation">
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
+            <button id="finish-btn" style="display: none;">Finish</button>
+          </div>
+        </div>
+
+        <!-- Right: Status Panel -->
+        <div class="status-panel">
+          <h3>Question Status</h3>
+          <div id="status-grid" class="grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result Section -->
+    <div id="result-container" class="card" style="display: none;">
+      <h2>🎉 Exam Completed!</h2>
+      <p><strong>Roll No:</strong> <span id="result-roll"></span></p>
+      <p><strong>Name:</strong> <span id="result-name"></span></p>
+      <p><strong>Score:</strong> <span id="result-score"></span> / 30</p>
+      <div id="result-details"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
