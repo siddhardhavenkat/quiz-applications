@@ -1,0 +1,146 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.card {
+  text-align: center;
+  padding: 30px;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 60%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #0078d7;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.topic-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.topic-btn {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.topic-btn.active {
+  background: #0078d7;
+  color: white;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.question-card {
+  width: 65%;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fafafa;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+#options-container {
+  margin-top: 20px;
+}
+
+.option {
+  display: block;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.option.selected {
+  background: #0078d7;
+  color: white;
+}
+
+.status-panel {
+  width: 30%;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.grid button {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+button.not-visited { background: #d6d6d6; }
+button.not-answered { background: #ff5252; color: white; }
+button.answered { background: #4caf50; color: white; }
+button.review { background: #9c27b0; color: white; }
+
+.navigation {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-legend {
+  list-style-type: none;
+  padding: 0;
+}
+
+.circle {
+  width: 15px; height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.not-visited { background: #d6d6d6; }
+.not-answered { background: #ff5252; }
+.answered { background: #4caf50; }
+.review { background: #9c27b0; }
